@@ -1,6 +1,5 @@
 let mapleader=" "
 
-
 " plugs
 map <Leader>nt :NERDTreeFind<CR>
 map <Leader>p :Files<CR>
