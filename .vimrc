@@ -8,7 +8,9 @@ set ruler
 set cursorline
 set encoding=utf-8
 set showmatch
-set sw=2
+set sw=4
+set noexpandtab
+set tabstop=4
 set relativenumber
 so ~/config/.vim/plugins.vim
 so ~/config/.vim/plugin-config.vim
