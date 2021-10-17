@@ -70,9 +70,7 @@ ZSH_THEME="nanotech"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git
-
-)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,11 +97,40 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
+alias zshconfig="v ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"a
- source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-alias v=vim
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+alias v=nvim
+alias vh="v *.h"
+alias vih="v */*.h"
+alias ez="exec zsh"
 alias c=clear
 alias g=gcc -Wall -Wextra -Werror
-alias n=norminette -R CheckForbiddenSourceHeader
+alias n=norminette
+alias ne=neofetch
+##
+#
+# Make aliases
+#
+alias m="make"
+alias mr="make re"
+alias mc="make clean"
+alias mf="make fclean"
+#
+# IP alias
+alias ipe="networksetup -getinfo Ethernet"
+alias ipw="networksetup -getinfo Wi-Fi"
+# Load Homebrew config script
+source $HOME/.brewconfig.zsh
+neofetch
+
+cl()
+{
+	cd $1
+	ls -alF
+}
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+alias matryoshka='~/.matryoshka/matryoshka.sh'
+alias dockerclean='~/.matryoshka/docker-clean.sh'
