@@ -8,7 +8,7 @@ export ZSH="/Users/ajimenez/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="nanotech"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -98,15 +98,17 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 alias zshconfig="v ~/.zshrc"
+alias vimconfig="v ~/config"
 # alias ohmyzsh="mate ~/.oh-my-zsh"a
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 alias v=nvim
 alias vh="v *.h"
 alias vih="v */*.h"
+alias vm="v Makefile"
 alias ez="exec zsh"
 alias c=clear
-alias g=gcc -Wall -Wextra -Werror
+alias g="gcc -Wall -Wextra -Werror"
 alias n=norminette
 alias ne=neofetch
 ##
@@ -121,10 +123,16 @@ alias mf="make fclean"
 # IP alias
 alias ipe="networksetup -getinfo Ethernet"
 alias ipw="networksetup -getinfo Wi-Fi"
+#
+# 42 TOOLBOX
+alias clean42="bash ~/42_toolbox/free_space.sh"
+
 # Load Homebrew config script
 source $HOME/.brewconfig.zsh
 neofetch
-
+alias cc="cd ~/Desktop/42-cursus"
+alias cv="cd ~/Desktop/42-cursus/42Cursus-02-push_swap"
+alias b=bat
 cl()
 {
 	cd $1
@@ -134,3 +142,6 @@ cl()
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 alias matryoshka='~/.matryoshka/matryoshka.sh'
 alias dockerclean='~/.matryoshka/docker-clean.sh'
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
