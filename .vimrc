@@ -23,7 +23,7 @@ set laststatus=2
 set noshowmode
 
 "Estas usando vim gili
-map <Up> :echo "Estas usando vim pedazo de subnormal" <Cr>
-map <Down> :echo "Estas usando vim pedazo de subnormal" <CR>
-map <Left> :echo "Estas usando vim pedazo de subnormal" <CR>
-map <Right> :echo "Estas usando vim pedazo de subnormal" <CR>
+"map <Up> :echo "Estas usando vim pedazo de subnormal" <Cr>
+"map <Down> :echo "Estas usando vim pedazo de subnormal" <CR>
+"map <Left> :echo "Estas usando vim pedazo de subnormal" <CR>
+"map <Right> :echo "Estas usando vim pedazo de subnormal" <CR>
