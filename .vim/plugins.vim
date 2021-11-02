@@ -17,10 +17,6 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 
-"Norminette
-Plug 'vim-syntastic/syntastic'
-Plug 'alexandregv/norminette-vim'
-
 "Bracket Colorizer
 Plug 'luochen1990/rainbow'
 
@@ -28,6 +24,7 @@ Plug 'luochen1990/rainbow'
 Plug 'maximbaz/lightline-ale'
 Plug 'itchyny/lightline.vim'
 
-Plug 'pbondoer/vim-42header'
+"42 
+Plug '42paris/42header'
 
 call plug#end()
