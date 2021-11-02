@@ -34,6 +34,10 @@ let NERDTreeMapOpenInTab='\t'
 
 let g:javascript_plugin_flow = 1
 
+"42 Header
+let g:user42 = 'ajimenez'
+let g:mail42 = 'ajimenez@student.42.fr'
+
 " TextEdit might fail if hidden is not set.
 set hidden
 
