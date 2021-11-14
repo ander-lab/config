@@ -9,7 +9,7 @@ source ~/.vimrc
 ~~~
 
 # CocConfig
-Only for mac users and c/cpp, I recommend add this lines to your :CocConfig
+Only for macOS Monterrey users and c/cpp, I recommend add this lines to your :CocConfig
 ~~~
   "languageserver": {
     "ccls": {
