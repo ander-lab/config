@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/ajimenez/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -70,7 +70,9 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git
+	zsh-autosuggestions
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -97,51 +99,10 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="v ~/.zshrc"
-alias vimconfig="v ~/config"
+alias zshconfig="nv ~/.zshrc"
+alias vimconfig="nv ~/config"
 # alias ohmyzsh="mate ~/.oh-my-zsh"a
-
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-alias v=nvim
-alias vh="v *.h"
-alias vih="v */*.h"
-alias vm="v Makefile"
-alias ez="exec zsh"
-alias c=clear
-alias g="gcc -Wall -Wextra -Werror"
-alias n=norminette
-alias ne=neofetch
-##
-#
-# Make aliases
-#
-alias m="make"
-alias mr="make re"
-alias mc="make clean"
-alias mf="make fclean"
-#
-# IP alias
-alias ipe="networksetup -getinfo Ethernet"
-alias ipw="networksetup -getinfo Wi-Fi"
-#
-# 42 TOOLBOX
-alias clean42="bash ~/42_toolbox/free_space.sh"
-
-# Load Homebrew config script
-source $HOME/.brewconfig.zsh
-neofetch
-alias cc="cd ~/Desktop/42-cursus"
-alias cv="cd ~/Desktop/42-cursus/42Cursus-02-push_swap"
-alias b=bat
-cl()
-{
-	cd $1
-	ls -alF
-}
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-alias matryoshka='~/.matryoshka/matryoshka.sh'
-alias dockerclean='~/.matryoshka/docker-clean.sh'
-
+source ~/config/zsh-alias.zsh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+export PATH=$PATH:/usr/local/sbin
