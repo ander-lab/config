@@ -36,8 +36,8 @@ alias start-docker="bash ~/42_toolbox/init_docker.sh"
 
 # Load Homebrew config script
 neofetch
-alias cc="cd ~/Desktop/42-cursus"
-alias cv="cd ~/Desktop/.42/42Cursus-03-Philosophers"
+alias cc="cd ~/Desktop/.42"
+alias cv="cd ~/Desktop/.42/42Cursus-03-Minishell"
 alias ch="cd ~/Desktop/42-cursus/42Cursus-00-Libft"
 alias rf="rm -rf"
 alias b=bat
