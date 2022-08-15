@@ -1,8 +1,10 @@
 call plug#begin('~/.vim/plugged')
 
 " Themes
+"Plug 'projekt0n/github-nvim-theme'
 Plug 'morhetz/gruvbox'
 Plug 'shinchu/lightline-gruvbox.vim'
+Plug 'arcticicestudio/nord-vim'
 "Plug 'dracula/vim', { 'as': 'dracula' }
 
 " Tree
