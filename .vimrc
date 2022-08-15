@@ -16,8 +16,17 @@ so ~/config/.vim/plugins.vim
 so ~/config/.vim/plugin-config.vim
 so ~/config/.vim/maps.vim
 
-colorscheme gruvbox
-let g:gruvbox_contrast_dark = "hard"
+"colorscheme gruvbox
+" Example config in Vim-Script
+let g:nord_contrast = v:true
+let g:nord_borders = v:false
+let g:nord_disable_background = v:false
+let g:nord_italic = v:false
+let g:nord_uniform_diff_background = v:true
+
+" Load the colorscheme
+colorscheme nord
+"let g:gruvbox_contrast_dark = "hard"
 highlight Normal ctermbg=NONE
 set laststatus=2
 set noshowmode
