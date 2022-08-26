@@ -9,6 +9,10 @@ map <Leader>ag :Ag<CR>
 "Fast
 nmap <Leader>s <Plug>(easymotion-s2)
 
+"Custom
+
+nmap <Leader>h5 :call PutHtml()<CR>
+
 " git
 nnoremap <Leader>G :G<cr>
 nnoremap <Leader>gp :Gpush<cr>
@@ -183,3 +187,19 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+fu! PutHtml()
+	put = '<!DOCTYPE html>'
+	put = '<html lang=\"en\">'
+	put = '<head>'
+	put = '	<meta charset=\"UTF-8\">'
+	put = '	<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">'
+	put = '	<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">'
+	put = '	<title>Document</title>'
+	put = '</head>'
+	put = '<body>'
+	put = ' '
+	put = '</body>'
+	put = '</html>'
+endfu
+
