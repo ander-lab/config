@@ -11,6 +11,9 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'scrooloose/nerdtree'
 
 "IDE
+Plug 'pangloss/vim-javascript'    " JavaScript support
+Plug 'leafgarland/typescript-vim' " TypeScript syntax
+Plug 'hashivim/vim-terraform' " Terraform syntax and commands
 Plug 'easymotion/vim-easymotion'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'terryma/vim-multiple-cursors'
@@ -28,5 +31,8 @@ Plug 'itchyny/lightline.vim'
 
 "42 
 Plug '42paris/42header'
+
+
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()

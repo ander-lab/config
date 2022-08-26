@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -71,3 +78,41 @@ source ~/config/zsh-alias.zsh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 export PATH=$PATH:/usr/local/sbin
+export PATH=/Users/alex/Library/Python/3.8/bin:$PATH
+
+
+function set_conda { 
+	HOME=$(echo ~)
+    INSTALL_PATH="/goinfre"
+    MINICONDA_PATH=$INSTALL_PATH"/miniconda3/bin"
+    PYTHON_PATH=$(which python)
+    SCRIPT="Miniconda3-latest-MacOSX-x86_64.sh"
+    REQUIREMENTS="jupyter numpy pandas"
+    DL_LINK="https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh"
+
+	if echo $PYTHON_PATH | grep -q $INSTALL_PATH; then 
+		echo "good python version :)"
+	else
+	cd
+	if [ ! -f $SCRIPT ]; then
+		curl -LO $DL_LINK
+		fi
+		if [ ! -d $MINICONDA_PATH ]; then
+            sh $SCRIPT -b -p $INSTALL_PATH"/miniconda3"
+	fi
+	conda install -y $(echo $REQUIREMENTS) clear
+	echo "Which python:"
+	which python
+	if grep -q "ˆexport PATH=$MINICONDA_PATH" ~/.zshrc 
+	then
+		echo "export already in .zshrc"; 
+	else
+		echo "adding export to .zshrc ...";
+		echo "export PATH=$MINICONDA_PATH:$PATH" >> ~/.zshrc 
+	fi
+	source ~/.zshrc
+	fi 
+}
+
+# To customize prompt, run `p10k configure` or edit ~/config/.p10k.zsh.
+[[ ! -f ~/config/.p10k.zsh ]] || source ~/config/.p10k.zsh
