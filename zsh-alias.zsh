@@ -1,11 +1,10 @@
 # Example aliases
 alias zshconfig="nv ~/.zshrc"
 alias vimconfig="nv ~/config"
-alias nv=nvim
 alias vh="nv *.h"
 alias vih="nv */*.h"
 alias vm="nv Makefile"
-alias v="nv ."
+alias v="openNvim"
 alias cvv="cv;nv ."
 alias ez="exec zsh"
 alias c=clear
@@ -42,8 +41,17 @@ alias ch="cd ~/Desktop/42-cursus/42Cursus-00-Libft"
 alias rf="rm -rf"
 alias b=bat
 alias clean="open ~/Utils/ncdu $HOME"
+
 cl()
 {
 	cd $1
 	ls -alF
+}
+
+function openNvim {
+  if [ $# -eq 0 ]; then
+    nvim ./
+  else
+    nvim $1
+  fi
 }
