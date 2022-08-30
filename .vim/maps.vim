@@ -202,4 +202,3 @@ fu! PutHtml()
 	put = '</body>'
 	put = '</html>'
 endfu
-

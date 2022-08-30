@@ -1,6 +1,8 @@
 # Example aliases
 alias zshconfig="nv ~/.zshrc"
 alias vimconfig="nv ~/config"
+alias config="v ~/config"
+alias nv="nvim"
 alias vh="nv *.h"
 alias vih="nv */*.h"
 alias vm="nv Makefile"
