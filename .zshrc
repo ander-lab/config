@@ -78,7 +78,7 @@ source ~/config/zsh-alias.zsh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 export PATH=$PATH:/usr/local/sbin
-export PATH=/Users/alex/Library/Python/3.8/bin:$PATH
+export PATH=/Users/alex/Library/Python/3.9/bin:$PATH
 
 
 function set_conda { 
@@ -116,3 +116,5 @@ function set_conda {
 
 # To customize prompt, run `p10k configure` or edit ~/config/.p10k.zsh.
 [[ ! -f ~/config/.p10k.zsh ]] || source ~/config/.p10k.zsh
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
